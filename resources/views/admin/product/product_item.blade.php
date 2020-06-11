@@ -4,7 +4,10 @@
     <td>{{ $product->price }}</td>
     <td>{{ $product->description }}</td>
     <td>
-        <a href="{{ route('admin.products.edit', $product->id) }}" class="btn btn-sm btn-primary">Редактировать</a>
+{{--        <a href="{{ route('admin.products.edit', $product->id) }}" class="btn btn-sm btn-primary">Редактировать</a>--}}
+        <button class="btn btn-sm btn-primary productUpdate"
+                data-url="{{route('admin.products.edit', $product->id)}}"
+        >Редактировать</button>
         <button
             class="btn btn-sm btn-danger productDelete"
             data-url="{{route('admin.products.destroy', $product->id)}}"
